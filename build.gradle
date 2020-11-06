@@ -18,8 +18,36 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://dl.bintray.com/arrow-kt/arrow-kt/" }
     }
 }
+
+ext {
+    /* APP */
+    versionMajor = 0 // Max 9
+    versionMinor = 0 // Max 9
+    versionPatch = 1 // Max 9
+    versionBuild = 1  // Max 99
+
+    versionCode = versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+    versionName = "${versionMajor}.${versionMinor}.${versionPatch}.${versionBuild}"
+
+    minSdkVersion = 23
+
+    /* COMMON */
+    targetSdkVersion = 29
+    compileSdkVersion = 29
+    buildToolsVersion = '29.0.3'
+}
+
+def arrowVersion = "0.11.0"
+def retrofitVersion = '2.9.0'
+
+ext.libraries = [
+        arrow_core              : "io.arrow-kt:arrow-core:$arrowVersion",
+        retrofit                : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+        retrofit_converter      : "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+]
 
 task clean(type: Delete) {
     delete rootProject.buildDir
