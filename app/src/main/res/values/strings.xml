@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">OpenBank Marvel</string>
+
+    <string name="something_happen">Ups! Something went wrong</string>
+    <string name="not_available">Not available</string>
+    <string name="bio_header">Bio</string>
+    <string name="comics_header">Comics</string>
+    <string name="series_header">Series</string>
+    <string name="stories_header">Stories</string>
+    <string name="events_header">Events</string>
+    <string name="urls_header">Urls</string>
+    <string name="empty_summary">There are no %s</string>
 </resources>

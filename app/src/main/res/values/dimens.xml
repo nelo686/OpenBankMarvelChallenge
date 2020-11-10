@@ -1,0 +1,12 @@
+<resources>
+
+    <dimen name="margin_very_small">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_big">24dp</dimen>
+
+    <dimen name="size_icon">30dp</dimen>
+    <dimen name="size_image">100dp</dimen>
+    <dimen name="size_item">240dp</dimen>
+
+</resources>
