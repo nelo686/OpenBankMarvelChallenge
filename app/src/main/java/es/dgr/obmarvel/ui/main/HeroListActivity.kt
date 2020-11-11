@@ -36,6 +36,11 @@ class HeroListActivity : AppCompatActivity() {
         }
     }
 
+    override fun onDestroy() {
+        viewModel::onDestroy
+        super.onDestroy()
+    }
+
     private fun setUpRecycler() {
         adapter = HeroAdapter(viewModel::onItemClicked)
         binding.rvHeroes.apply {

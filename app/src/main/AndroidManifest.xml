@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.detail.HeroDetailActivity"/>
+        <activity android:name=".ui.web.WebActivity"/>
     </application>
 
 </manifest>

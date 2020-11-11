@@ -5,14 +5,11 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import es.dgr.data.datasource.agreement.HeroesService
-import es.dgr.data.datasource.gateways.HeroesDataGateway
-import es.dgr.domain.gateways.HeroesGateway
 import es.dgr.obmarvel.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.sql.Timestamp
 import javax.inject.Singleton
 
 @Module
@@ -47,20 +44,4 @@ class DataModule {
     @Provides
     fun provideHeroesService(retrofit: Retrofit): HeroesService =
         retrofit.create(HeroesService::class.java)
-
-    @Provides
-    fun timestampProvider(): Timestamp =
-        Timestamp(System.currentTimeMillis())
-
-    @Provides
-    fun getHeroesGatewayProvider(
-        service: HeroesService,
-        timestamp: Timestamp,
-    ): HeroesGateway =
-        HeroesDataGateway(
-            service = service,
-            timestamp = timestamp,
-            publicApiKey = BuildConfig.PUBLIC_API_KEY,
-            privateApiKey = BuildConfig.PRIVATE_API_KEY
-        )
 }

@@ -47,4 +47,8 @@ class HeroListViewModel @ViewModelInject constructor(
     fun atTheEndOfScroll(size: Int) {
         getHeroes(offset = size)
     }
+
+    fun onDestroy() {
+        cancelScope()
+    }
 }
