@@ -69,8 +69,10 @@ dependencies {
 
     testImplementation(TestLibs.junit)
 
-    androidTestImplementation(TestLibs.junit_ext)
     androidTestImplementation(TestLibs.espresso_core)
+    androidTestImplementation(TestLibs.espresso_intents)
+    androidTestImplementation(TestLibs.junit_ext)
+    androidTestImplementation(TestLibs.kakao)
 }
 
 kapt {

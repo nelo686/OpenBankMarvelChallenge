@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import es.dgr.domain.entities.Hero
-import es.dgr.obmarvel.databinding.ViewHeroeBinding
+import es.dgr.obmarvel.databinding.ViewHeroBinding
 
 class HeroAdapter(private val listener: (Int) -> Unit) :
     RecyclerView.Adapter<HeroAdapter.HeroViewHolder>() {
@@ -18,7 +18,7 @@ class HeroAdapter(private val listener: (Int) -> Unit) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroViewHolder =
         HeroViewHolder(
-            ViewHeroeBinding.inflate(
+            ViewHeroBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
@@ -35,7 +35,7 @@ class HeroAdapter(private val listener: (Int) -> Unit) :
         items = items.toMutableList().apply { addAll(newItems) }
     }
 
-    class HeroViewHolder(private val binding: ViewHeroeBinding) : RecyclerView.ViewHolder(binding.root) {
+    class HeroViewHolder(private val binding: ViewHeroBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Hero, listener: (Int) -> Unit) {
             itemView.setOnClickListener { listener(item.id) }
             binding.ivPoster.load("${item.thumbnail.path}.${item.thumbnail.extension}")

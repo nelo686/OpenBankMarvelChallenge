@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:spanCount="2"
-        tools:listitem="@layout/view_heroe" />
+        tools:listitem="@layout/view_hero" />
 
     <include
         android:id="@+id/loader"

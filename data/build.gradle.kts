@@ -6,9 +6,13 @@ plugins {
 dependencies {
     implementation(project(":domain"))
     implementation(Kotlin.stdlib)
+    implementation(Kotlin.coroutines_core)
+    implementation(Kotlin.coroutines)
 
     implementation(Libs.arrow_core)
-    implementation(Libs.okhttp3)
-    implementation(Libs.okhttp3_interceptor)
     implementation(Libs.retrofit)
+
+    testImplementation(TestLibs.junit)
+    testImplementation(TestLibs.kluent)
+    testImplementation(TestLibs.mockito_kotlin)
 }

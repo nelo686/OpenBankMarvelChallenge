@@ -43,9 +43,12 @@ private object Version {
     const val retrofit = "2.9.0"
 
     // Test libs
-    const val espresso_core = "3.3.0"
+    const val espresso = "3.3.0"
     const val junit = "4.13.1"
     const val junit_ext = "1.1.2"
+    const val kakao = "2.4.0"
+    const val kluent = "1.60"
+    const val mockito_kotlin = "2.2.0"
 }
 
 object AndroidLibs {
@@ -72,7 +75,11 @@ object Libs {
 }
 
 object TestLibs {
-    const val espresso_core = "androidx.test.espresso:espresso-core:${Version.espresso_core}"
+    const val espresso_core = "androidx.test.espresso:espresso-core:${Version.espresso}"
+    const val espresso_intents = "androidx.test.espresso:espresso-intents:${Version.espresso}"
     const val junit = "junit:junit:${Version.junit}"
     const val junit_ext = "androidx.test.ext:junit:${Version.junit_ext}"
+    const val kakao = "com.agoda.kakao:kakao:${Version.kakao}"
+    const val kluent = "org.amshove.kluent:kluent-android:${Version.kluent}"
+    const val mockito_kotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Version.mockito_kotlin}"
 }
